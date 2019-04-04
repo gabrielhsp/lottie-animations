@@ -33,27 +33,113 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1X-kc-RGg" customClass="AnimatedControl" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="20" width="375" height="350"/>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1X-kc-RGg" customClass="LOTAnimatedControl">
+                                <rect key="frame" x="0.0" y="21" width="375" height="350"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="zHj-WT-ALv"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="flyAroundWorld.json"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15o-uP-dTm" customClass="LOTAnimatedSwitch">
+                                <rect key="frame" x="0.0" y="387" width="187.5" height="130"/>
+                                <color key="backgroundColor" red="0.26734498509999999" green="0.3273737558" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="oi0-SJ-yL6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVC-t4-3rH" customClass="LOTAnimatedSwitch">
+                                <rect key="frame" x="187.5" y="387" width="187.5" height="130"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7L-zY-lc7">
+                                <rect key="frame" x="16" y="533" width="343" height="60"/>
+                                <color key="backgroundColor" red="0.39150054499999998" green="0.37300813710000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pNW-q3-XS0"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Tf9-5v-a1k" kind="show" id="PG0-x5-rpB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rVC-t4-3rH" firstAttribute="width" secondItem="15o-uP-dTm" secondAttribute="width" id="10Z-vg-uEP"/>
+                            <constraint firstItem="15o-uP-dTm" firstAttribute="top" secondItem="g1X-kc-RGg" secondAttribute="bottom" constant="16" id="9hJ-fT-zvV"/>
+                            <constraint firstItem="rVC-t4-3rH" firstAttribute="height" secondItem="15o-uP-dTm" secondAttribute="height" id="Czm-TJ-caV"/>
+                            <constraint firstItem="a7L-zY-lc7" firstAttribute="top" secondItem="15o-uP-dTm" secondAttribute="bottom" constant="16" id="Dl2-Bn-Khn"/>
                             <constraint firstItem="g1X-kc-RGg" firstAttribute="leading" secondItem="UEU-nK-tmD" secondAttribute="leading" id="QgR-4N-LKN"/>
-                            <constraint firstItem="g1X-kc-RGg" firstAttribute="top" secondItem="UEU-nK-tmD" secondAttribute="top" id="ots-of-0xQ"/>
+                            <constraint firstItem="UEU-nK-tmD" firstAttribute="trailing" secondItem="rVC-t4-3rH" secondAttribute="trailing" id="SUl-Id-ojt"/>
+                            <constraint firstItem="UEU-nK-tmD" firstAttribute="trailing" secondItem="a7L-zY-lc7" secondAttribute="trailing" constant="16" id="fsz-f5-2HP"/>
+                            <constraint firstItem="a7L-zY-lc7" firstAttribute="leading" secondItem="UEU-nK-tmD" secondAttribute="leading" constant="16" id="gLm-Gd-RPA"/>
+                            <constraint firstItem="rVC-t4-3rH" firstAttribute="top" secondItem="g1X-kc-RGg" secondAttribute="bottom" constant="16" id="jPh-kT-INg"/>
+                            <constraint firstItem="15o-uP-dTm" firstAttribute="width" secondItem="uBI-aw-7iH" secondAttribute="width" multiplier="0.5" id="nLF-ge-bFA"/>
+                            <constraint firstItem="g1X-kc-RGg" firstAttribute="top" secondItem="UEU-nK-tmD" secondAttribute="top" constant="1" id="ots-of-0xQ"/>
                             <constraint firstItem="UEU-nK-tmD" firstAttribute="trailing" secondItem="g1X-kc-RGg" secondAttribute="trailing" id="pMd-Nc-UsJ"/>
+                            <constraint firstItem="15o-uP-dTm" firstAttribute="leading" secondItem="UEU-nK-tmD" secondAttribute="leading" id="xcd-BV-2hu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UEU-nK-tmD"/>
                     </view>
                     <navigationItem key="navigationItem" id="8sH-uK-u47"/>
+                    <connections>
+                        <outlet property="playButton" destination="rVC-t4-3rH" id="bhW-AJ-0BK"/>
+                        <outlet property="switchButton" destination="15o-uP-dTm" id="P7j-zG-htY"/>
+                        <outlet property="viewAnimada" destination="g1X-kc-RGg" id="1p6-4d-6jp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TtL-SK-O6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442" y="224"/>
+            <point key="canvasLocation" x="518" y="224"/>
+        </scene>
+        <!--Scroll Animation-->
+        <scene sceneID="2R0-K3-jVE">
+            <objects>
+                <viewController id="Tf9-5v-a1k" customClass="ScrollAnimation" customModule="LottieAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BKs-RJ-qpi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8c-kw-xBB" customClass="LOTAnimatedControl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.26734498509999999" green="0.3273737558" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Tl-fr-kE8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mpj-e3-tix" firstAttribute="bottom" secondItem="V8c-kw-xBB" secondAttribute="bottom" id="8xG-1q-pY2"/>
+                            <constraint firstItem="mpj-e3-tix" firstAttribute="trailing" secondItem="V8c-kw-xBB" secondAttribute="trailing" id="G5d-Tz-hZD"/>
+                            <constraint firstItem="0Tl-fr-kE8" firstAttribute="bottom" secondItem="mpj-e3-tix" secondAttribute="bottom" id="KNR-80-38u"/>
+                            <constraint firstItem="0Tl-fr-kE8" firstAttribute="top" secondItem="mpj-e3-tix" secondAttribute="top" id="NJF-es-4cx"/>
+                            <constraint firstItem="V8c-kw-xBB" firstAttribute="leading" secondItem="mpj-e3-tix" secondAttribute="leading" id="Pcy-nE-HEv"/>
+                            <constraint firstItem="V8c-kw-xBB" firstAttribute="top" secondItem="mpj-e3-tix" secondAttribute="top" id="cqd-5e-N3E"/>
+                            <constraint firstItem="0Tl-fr-kE8" firstAttribute="leading" secondItem="mpj-e3-tix" secondAttribute="leading" id="ggm-zU-mMP"/>
+                            <constraint firstItem="0Tl-fr-kE8" firstAttribute="trailing" secondItem="mpj-e3-tix" secondAttribute="trailing" id="o2R-XO-dx8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mpj-e3-tix"/>
+                    </view>
+                    <connections>
+                        <outlet property="myAnimation" destination="V8c-kw-xBB" id="2dt-nq-Eme"/>
+                        <outlet property="myScrollView" destination="0Tl-fr-kE8" id="ME6-ac-vaj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3KM-EF-Q3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440.8" y="223.53823088455775"/>
         </scene>
     </scenes>
 </document>

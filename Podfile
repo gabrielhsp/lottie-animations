@@ -6,7 +6,7 @@ target 'LottieAnimations' do
   use_frameworks!
 
   # Pods for LottieAnimations
-  pod 'lottie-ios'
+  pod 'lottie-ios', '2.5.3'
 
   target 'LottieAnimationsTests' do
     inherit! :search_paths
